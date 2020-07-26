@@ -23,5 +23,13 @@ Hints:
   - Config Hyper V to have a workable virutell switch for minikube to connect - Problem: WLAN is not used; connection is done with virtuell switch, thus no internet - Solution: workaround with network bypass (loopback) - check
   - Install minikube - required multiple attenpts - do not forget to deinstall proberly and to delete .minikube folder in user directory - check
   - configure secret docker-registry, not everything should be public - check
+  - build docker image does not work, because it is not configured to work with hyper v, instead it came with virtualbox
+  - deinstall docker toolbox
+  - try to install docker desktop app... remember that it did not work the first time around, because the Win10 home version is too old
+  - get a little fustrated, discuss problem with person I live together. Get his PC that has Win10 Pro and better computational power
+
+Solution: use better computer and use combined docker with kubetnetes installation.
+
+## Run HelloWorld with new SetUp to verify functionality
 
 
