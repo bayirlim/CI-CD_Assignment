@@ -1,20 +1,36 @@
+# https://kubernetes.io/docs/concepts/cluster-administration/manage-deployment/
+# first the service then the application
+apiVersion: v1
+kind: Service
+metadata:
+  name: hello-world-service
+  labels:
+    app: hello-world
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 8080
+  selector:
+    app: hello-world
+---
 apiVersion: apps/v1
 kind: Deployment
 metadata:
-  name: hello-world
+  name: hello-world-application
 spec:
   selector:
     matchLabels:
-      run: load-balancer-example
-  replicas: 2
+      app: hello-world
+  replicas: 1
   template:
     metadata:
       labels:
-        run: load-balancer-example
+        app: hello-world
     spec:
       containers:
         - name: hello-world
-          image: gcr.io/google-samples/node-hello:1.0
+          image: merveba/helloworld:latest
+          imagePullPolicy: "Always"
           ports:
             - containerPort: 8080
               protocol: TCP
