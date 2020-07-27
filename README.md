@@ -20,7 +20,8 @@ Hints:
   - Docker - check
   - Choclatey - easy to install - check
   - Hyper V - Problem: not availabe on Win10 Home - Solution: work around with Hyper V installer - check
-  - Config Hyper V to have a workable virutell switch for minikube to connect - Problem: WLAN is not used; connection is done with virtuell switch, thus no internet - Solution: workaround with network bypass (loopback) - check
+  - Config Hyper V to have a workable 
+  utell switch for minikube to connect - Problem: WLAN is not used; connection is done with virtual switch, thus no internet - Solution: workaround with network bypass (loopback) - check
   - Install minikube - required multiple attenpts - do not forget to deinstall proberly and to delete .minikube folder in user directory - check
   - configure secret docker-registry, not everything should be public - check
   - build docker image does not work, because it is not configured to work with hyper v, instead it came with virtualbox
@@ -31,5 +32,7 @@ Hints:
 Solution: use better computer and use combined docker with kubetnetes installation.
 
 ## Run HelloWorld with new SetUp to verify functionality
+Instead of using Minikube use Kubernet that comes along with Docker Desktop App on a Win10 Pro. 
+It runs locally in Docker instance and is a sinle node cluster.
 
 
